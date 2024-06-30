@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Sichen</title>
+</head>
+
+<body>
+    <section class="w-full min-h-screen bg-black px-80  ">
+        <div class="w-[50re] min-h-screen py-10 relative">
+            <h1 class="text-3xl text-slate-300 font-bold font-serif ">Sichen</h1>
+            <% if(prompt && mainResult){ %>
+            <div class="h-10 w-[90%] mt-5 overflow-x-hidden text-white px-9">
+                Q:: <%= prompt %>
+            </div>
+            <div class="min-h-96  w-full  mt-5 text-white auto-rows-auto px-9 ">
+                <%= mainResult %>
+            </div>
+            <% } %>
+            <div class=" w-full absolute bottom-10">
+                <form class="flex" action="/chat" method="post" autocomplete="off">
+                    <input class="px-7 py-5 w-[90%] rounded-l-lg bg-slate-800 text-white outline-none" type="text"
+                        placeholder="Enter your prompt..." name="question">
+                    <input class="px-7 py-5 font-bold text-white bg-slate-800 rounded-r-lg" type="submit"
+                        value="Ask me?">
+                </form>
+            </div>
+        </div>
+
+    </section>
+</body>
+
+</html>
